@@ -19,7 +19,7 @@ insert into company_users values (1,1,'English')
 ,(2,7,'English');
 
 
-#-- filter comnpanies that having atleast 2 users speakig german and english
+# filter comnpanies that having atleast 2 users speakig german and english subquery method
 
 select company_id from (select company_id,user_id from company_users
 where language in ("German","English")
