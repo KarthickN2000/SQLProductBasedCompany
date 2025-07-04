@@ -32,3 +32,11 @@ select cb.customer_id,group_concat(msc.product_id) from customer_budget cb
 join moving_sum_cte msc
 on cb.budget >= msc.moving_sum
 group by cb.customer_id;
+
+
+
+#output
+
+300	P1,P2,P3
+200	P1,P2
+100	P1
